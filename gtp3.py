@@ -1,5 +1,4 @@
 import streamlit as st
-import os
 import openai
 
 
@@ -7,7 +6,7 @@ st.markdown("# Click here to predict")
 
 st.write('Enter keywords seperated by commas, for example: Lady Gaga, Cups, London')
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = st.secrets['openai_key']
 #  "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"
 
 
