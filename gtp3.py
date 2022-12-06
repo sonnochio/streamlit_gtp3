@@ -2,15 +2,15 @@ import streamlit as st
 import openai
 
 
-st.markdown("# Click here to predict")
+st.markdown("# Got no idea? Generate a title")
 
-st.write('Enter keywords seperated by commas, for example: Lady Gaga, Cups, London')
+st.write('Enter keywords seperated by commas, for example: coffee, le wagon, jobs')
 
 openai.api_key = st.secrets['openai_key']
 #  "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"
 
 
-key_words=st.text_input(" ")
+key_words=st.text_input("coffee, le wagon, jobs")
 def generate_title_gtp3(text):
 
     response = openai.Completion.create(
